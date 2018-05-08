@@ -1,0 +1,21 @@
+<html>
+   <body>
+     
+   <script>
+var x = document.write("First decleration for x before functions<br>");
+function A(){
+var y = document.write("First decleration for y in function A<br>" );
+	
+	function B(){
+	var z = document.write("First decleration for z in function B<br>");
+	x = document.write("Second decleration for x in function B<br>");
+	y = document.write("Second decleration for y in function B<br>");
+	return 1;
+	}
+B();
+return 1;
+}
+A();
+   </script>
+   </body>
+</html>

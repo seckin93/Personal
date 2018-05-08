@@ -1,0 +1,62 @@
+<html>
+   <head>
+	<h1>JavaScript Code to Show Subprogram Parameters</h1>
+   </head>
+   <body>
+   <script>
+	function f1(x, y, z)
+	{
+		return x * y + z;
+	}
+	var p = f1(1,2,3);
+	document.write("Positional usage: ", p, "<br>");
+
+	function f2(x, y, z = 5)
+	{
+		return x + y * z;
+	}
+	var p = f2(y = 1, x = 2);
+	document.write("Keyword-Based usage with 2 variables: ", p, "<br>");
+	var p = f2(y = 1, x = 3, z = 2);
+	document.write("Keyword-Based usage with 3 variables: ", p, "<br>");
+
+	function f3(x, y, z = 5)
+	{
+		return x + y + z;
+	}
+	var p = f3(8, y = 6);
+	document.write("Combinational usage example 1: ", p, "<br>");
+
+	var p = f3(8, y = 6, 3);
+	document.write("Combinational usage example 2: ", p, "<br>");
+
+	function array(a, b, c, d)
+	{
+		return [1+a, 2, 3+b, 4];
+	}
+	
+	var p = array();
+	document.write("Array p is: ","[", p, "]", "<br>");
+	p[1] = 8;
+	p[3] = 10;
+	document.write("Array p is: ","[", p, "]", "<br>");
+
+	var q = array(3, 6, 9, 8);
+	document.write("Array q is: ","[", q, "]", "<br>");
+
+	function array2(a = 1, b = 3, c, d)
+	{
+		return [1+a, 2, 3+b, 4];
+	}
+	
+	var t = array2();
+	document.write("Array t is: ","[", t, "]", "<br>");
+	t[1] = 5;
+	t[3] = 0;
+	document.write("Array t is: ","[", t, "]", "<br>");
+
+	var z = array2(0, 6, 7, 1);
+	document.write("Array z is: ","[", z, "]", "<br>");	
+   </script>
+   </body>
+</html>
